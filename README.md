@@ -1,6 +1,43 @@
-# Manajemen Produk — React Router, Tailwind CSS & Integrasi ExpressJS (Tugas 4)
+# Manajemen Produk — Fullstack React (Router + Tailwind CSS) & ExpressJS (Prisma ORM)
 
-Aplikasi **Manajemen Produk** berbasis **React (Vite)** yang dikembangkan dari proyek CRUD sebelumnya menggunakan **React Router (`react-router-dom`)** dan **Tailwind CSS**, serta terintegrasi penuh dengan REST API **ExpressJS + Prisma ORM**.
+Aplikasi **Manajemen Produk** Fullstack yang terdiri dari:
+- **Frontend (Root Folder)**: Aplikasi React (Vite) dengan **React Router (`react-router-dom`)** dan **Tailwind CSS**.
+- **Backend (`./backend`)**: REST API **ExpressJS** dengan database **SQLite** menggunakan **Prisma ORM** dan konfigurasi **CORS**.
+
+## Struktur Direktori
+
+```text
+5027251076_Tugas3/
+├── backend/                  # Project Backend ExpressJS + Prisma ORM (SQLite)
+│   ├── controllers/          # Controller CRUD produk & validasi payload
+│   ├── lib/                  # Instance PrismaClient
+│   ├── prisma/               # Schema Prisma, migrasi, seeder, dan dev.db
+│   ├── routes/               # Routing endpoint /products
+│   ├── index.js              # Entry point server Express (port 3000)
+│   └── package.json
+├── src/                      # Project Frontend React + React Router + Tailwind CSS
+│   ├── components/           # Navbar, ProductCard (Grid/List), ProductModal, DeleteModal
+│   ├── pages/                # ProductListPage, ProductDetailPage, SettingsPage, NotFoundPage
+│   ├── App.jsx               # Konfigurasi BrowserRouter, Routes, dan integrasi API
+│   └── main.jsx
+├── screenshots/              # Bukti pengujian halaman dan skenario
+└── package.json
+```
+
+## Cara Menjalankan
+
+1. **Jalankan Backend ExpressJS (`http://localhost:3000`)**
+   ```bash
+   cd backend
+   npm install
+   node index.js
+   ```
+
+2. **Jalankan Frontend React (`http://localhost:5173`)**
+   ```bash
+   npm install
+   npm run dev
+   ```
 
 ## Fitur Utama
 
